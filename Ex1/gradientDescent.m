@@ -16,9 +16,12 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-    epsilon = X * theta - y;
-    delta = ((1/m) * epsilon' * X)';
-    theta = theta - alpha * delta;
+h = X * theta; % 97x1
+error = h - y; % 97x1
+delta = ((1/m) * error' * X)'; % no need to 'sum' if you vectorize like this!
+theta = theta - alpha * delta;
+
+
 
     % ============================================================
 
