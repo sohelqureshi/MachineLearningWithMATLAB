@@ -15,7 +15,7 @@ J = 0;
 h = X * theta;
 error = h - y;
 errorsq = error' * error;
-J = 1/ (2 * m) * sum(errorsq);
+J = 1/ (2 * m) * errorsq;
 
 
 
